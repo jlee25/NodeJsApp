@@ -13,12 +13,12 @@
   <% include partials/nav.ejs %>
 
   <section class="container">
-    <div class="paragraphs" id="paragraph">
+    <div class="paragraphs" id="searchtext">
       <p><%= obj.documents[id] %></p>
     </div>
     <form action="" method="" id="search" name="search">
-      <input name="query" id="query" type="text" size="30" maxlength="30">
-      <input name="searchit" type="button" value="Search" onClick="gethighlight()">
+      <input name="query" id="query" type="text" size="30" maxlength="30" />
+      <input class="submit" name="searchit" type="button" value="Search" onClick="highlight()" />
     </form>
     <div class="button">
       <% if ( id + 1 === 4 ) { %>
@@ -33,5 +33,14 @@
   </section>
 </body>
 <script>
+  highlight = () => {
+    let text = document.getElementById("query").value;
+    let query = new RegExp("(\\b" + text + "\\b)", "gim");
+    let searchedWord = document.getElementById("searchtext").innerHTML;
+    let word = searchedWord.replace(/(<span>|<\/span>)/gim, "");
+    document.getElementById("searchtext").innerHTML = word;
+    let newWord = word.replace(query, "<span>$&</span>");
+    document.getElementById("searchtext").innerHTML = newWord;
+  }
 </script>
 </html>

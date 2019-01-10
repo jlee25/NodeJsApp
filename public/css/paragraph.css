@@ -13,6 +13,12 @@ input {
   padding: 5px;
 }
 
+.submit {
+  background-color: black;
+  border: none;
+  color: white;
+}
+
 a {
   border: none;
   color: white;
@@ -24,7 +30,7 @@ a {
   text-align: center;
 }
 
-a:hover {
+a:hover, .submit:hover {
     color: red;
     transition: 1.5s;
   }
@@ -36,6 +42,10 @@ a:hover {
 
 .button a:nth-of-type(2) {
   margin-left: 15px;
+}
+
+span {
+  background-color: yellow
 }
 
 @font-face {
