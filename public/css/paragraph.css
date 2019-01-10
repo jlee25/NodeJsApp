@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto 0;
+  max-width: 1280px;
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 0 20px;
+}
+
+input {
+  width: 200px;
+  padding: 5px;
+}
+
+a {
+  border: none;
+  color: white;
+  background-color: black;
+  font-family: "Harry Potter", serif;
+  padding: 5px 20px;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:hover {
+    color: red;
+    transition: 1.5s;
+  }
+
+.button {
+  display: flex;
+  margin-top: 30px;
+}
+
+.button a:nth-of-type(2) {
+  margin-left: 15px;
+}
+
+@font-face {
+  font-family: "Harry Potter";
+  src: url(../../assets/font.TTF);
+}

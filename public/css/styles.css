@@ -1,0 +1,92 @@
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Harry Potter", serif;
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 30px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.list img {
+  max-width: 70%;
+}
+
+
+.listImages {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.listImages a {
+  text-decoration: none;
+}
+.listImages img {
+  display: block;
+  margin: 50px auto 0;
+  max-width: 50%;
+}
+.listImages p {
+  text-align: center;
+  font-size: 30px;
+  list-style-type: none;
+  color: black;
+  font-family: "Harry Potter", serif;
+}
+
+.listImages:nth-of-type(1) {
+  width: 900px;
+}
+
+.header {
+  text-decoration: none;
+}
+
+.listImages:nth-of-type(1):hover {
+  background-color: red;
+  transition: 1.5s;
+}
+
+.listImages:nth-of-type(2):hover {
+  background-color: green;
+  transition: 1.5s;
+}
+
+.listImages:nth-of-type(3):hover {
+  background-color: yellow;
+  transition: 1.5s;
+}
+
+.listImages:nth-of-type(4):hover {
+  background-color: blue;
+  transition: 1.5s;
+}
+
+@font-face {
+  font-family: "Harry Potter";
+  src: url(../../assets/font.TTF);
+}
+
+@media (max-width: 700px) {
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+  .list .listImages:nth-of-type(1) {
+  width: 100%;
+  }
+}

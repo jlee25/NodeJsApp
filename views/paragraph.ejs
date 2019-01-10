@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Harry Potter Paragraph</title>
+  <link rel="stylesheet" type="text/css" href="/css/paragraph.css" />
+  <link rel="stylesheet" type="text/css" href="/css/nav.css" />
+  <script src="/assets/highlight.js"></script>
+</head>
+<body>
+  <% include partials/nav.ejs %>
+
+  <section class="container">
+    <div class="paragraphs" id="paragraph">
+      <p><%= obj.documents[id] %></p>
+    </div>
+    <form action="" method="" id="search" name="search">
+      <input name="query" id="query" type="text" size="30" maxlength="30">
+      <input name="searchit" type="button" value="Search" onClick="gethighlight()">
+    </form>
+    <div class="button">
+      <% if ( id + 1 === 4 ) { %>
+        <a href="/documents/<%= id %>">Prev</a>
+      <% } else if ( id + 1 === 1) { %>
+        <a href="/documents/<%= id + 2 %>">Next</a>
+      <% } else { %>
+        <a href="/documents/<%= id %>">Prev</a>
+        <a href="/documents/<%= id + 2 %>">Next</a>
+      <% } %>
+    </div>
+  </section>
+</body>
+<script>
+</script>
+</html>
